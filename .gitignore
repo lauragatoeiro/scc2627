@@ -1,0 +1,13 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+
+# Dependências
+node_modules/
+
+# Ficheiros locais
+.env

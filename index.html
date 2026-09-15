@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swim Monitor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h1>Swim<span>Monitor</span></h1>
+      <p class="muted">Monitorização de natação</p>
+      <nav id="nav">
+        <button data-view="dashboard" class="active">📊 Dashboard</button>
+        <button data-view="athletes">👥 Atletas</button>
+        <button data-view="sessions">🏊 Treinos</button>
+        <button data-view="monitoring">❤️ Monitorização</button>
+        <button data-view="settings">⚙️ Configurações</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <button id="exportAll" class="secondary">⬇ Exportar dados</button>
+        <button id="resetDemo" class="danger ghost">Repor dados demo</button>
+      </div>
+    </aside>
+    <main>
+      <header class="topbar">
+        <div>
+          <h2 id="pageTitle">Dashboard da equipa</h2>
+          <p class="muted">Os dados ficam guardados neste navegador.</p>
+        </div>
+        <button id="quickAdd" class="primary">＋ Novo registo</button>
+      </header>
+      <section id="content"></section>
+    </main>
+  </div>
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-head"><h3 id="modalTitle"></h3><button id="closeModal" class="icon">✕</button></div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
